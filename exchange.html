@@ -2,7 +2,7 @@
  * @Author: shengqun.zhu shengqun2022@gmail.com
  * @Date: 2024-10-18 16:50:01
  * @LastEditors: shengqun.zhu shengqun2022@gmail.com
- * @LastEditTime: 2025-05-06 13:58:11
+ * @LastEditTime: 2025-05-06 14:19:21
  * @FilePath: /web3-travel/public/index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -22,8 +22,35 @@
     </style>
   </head>
   <body>
-    <div>
-      二维码
+    <div>请选择支付方式:</div>
+    <ul>
+       <li>
+          <input type="radio" name="identity" value="微信" checked="checked" />微信
+       </li>
+       <li>
+        <input type="radio" name="identity" value="支付宝" />支付宝
+     </li>
+    </ul>
+    <div id="image-container">
+      <img id="payment-image" src="weixin.jpg" alt="支付方式" width="200" />
     </div>
+     
+    <script>
+      const radios = document.querySelectorAll('input[name="identity"]');
+      const img = document.getElementById('payment-image');
+    
+      radios.forEach((radio) => {
+        radio.addEventListener('change', function () {
+          if (this.checked) {
+            if (this.value === '微信') {
+              img.src = 'WechatIMG43.jpeg';
+            } else if (this.value === '支付宝') {
+              img.src = 'WechatIMG44.jpeg';
+            }
+          }
+        });
+      });
+    </script>
+    
   </body>
 </html>

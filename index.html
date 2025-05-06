@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>示例网页</title>
-<link rel="stylesheet" href="styles.css">
-</head>
-<body>
-<header>
-<h1>欢迎来到我的网站</h1>
-<nav>
-<ul>
-<li><a href="#home">首页111</a></li>
-<li><a href="#about">关于我们1111</a></li>
-<li><a href="#services">服务</a></li>
-<li><a href="#contact">联系我们</a></li>
-</ul>
-</nav>
-</header>
-
-<main>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <style>
+       
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./logo192.png" alt="">
+      <div>价格: 29元</div>
+      <button id="buy">立刻购买</button>
+    </div>
+    <script>
+      var btn= document.getElementById("buy")
+      btn.onclick= function() {
+        
+        location.href= "exchange.html"
+      }
+ </script>
+  </body>
+</html>
